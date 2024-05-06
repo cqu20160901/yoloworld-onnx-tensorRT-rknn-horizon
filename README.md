@@ -6,13 +6,13 @@ yolovworld 目标检测部署版本，便于移植不同平台（onnx、tensorRT
 
 # 文件夹结构说明
 
-yolov8n_onnx：onnx模型、测试图像、测试结果、测试demo脚本
+yoloworld_onnx：onnx模型、测试图像、测试结果、测试demo脚本
 
-yolov8n_TensorRT：TensorRT版本模型、测试图像、测试结果、测试demo脚本、onnx模型、onnx2tensorRT脚本(tensorRT-7.2.3.4)
+yoloworld_TensorRT：TensorRT版本模型、测试图像、测试结果、测试demo脚本、onnx模型、onnx2tensorRT脚本(tensorRT-7.2.3.4)
 
-yolov8n_rknn：rknn模型、测试（量化）图像、测试结果、onnx2rknn转换测试脚本（rknn_toolkit2-2.0.0）
+yoloworld_rknn：rknn模型、测试（量化）图像、测试结果、onnx2rknn转换测试脚本（rknn_toolkit2-2.0.0）（尝试过 rknn_toolkit2-1.3、1.6 模型转化可以成功，但实际上板子运行模型时会报错）
 
-yolov8n_horizon：地平线模型、测试（量化）图像、测试结果、转换测试脚本、测试量化后onnx模型脚本
+yoloworld_horizon：地平线模型、测试（量化）图像、测试结果、转换测试脚本、测试量化后onnx模型脚本
 
 # 测试结果
 ![image](https://github.com/cqu20160901/yoloworld-onnx-tensorRT-rknn-horizon/blob/main/yoloworld_onnx/test_onnx_result.jpg)
