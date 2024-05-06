@@ -1,0 +1,310 @@
+2024-05-06 16:28:42,853 file: hb_mapper.py func: hb_mapper line No: 70 Start hb_mapper....
+2024-05-06 16:28:42,853 file: hb_mapper.py func: hb_mapper line No: 71 log will be stored in /convert_model/horizon_model_convert_sample/04_detection/03_yoloworld/mapper/hb_mapper_checker.log
+2024-05-06 16:28:42,854 file: hb_mapper.py func: hb_mapper line No: 72 hbdk version 3.27.4
+2024-05-06 16:28:42,854 file: hb_mapper.py func: hb_mapper line No: 73 horizon_nn version 0.13.3
+2024-05-06 16:28:42,854 file: hb_mapper.py func: hb_mapper line No: 74 hb_mapper version 1.6.8a
+2024-05-06 16:28:42,855 file: hb_mapper.py func: hb_mapper line No: 76 parameter [output] is deprecated
+2024-05-06 16:28:42,888 file: helper.py func: helper line No: 124 Model input names: ['images']
+2024-05-06 16:28:42,890 file: hb_mapper_checker.py func: hb_mapper_checker line No: 104 Model type: onnx
+2024-05-06 16:28:42,890 file: hb_mapper_checker.py func: hb_mapper_checker line No: 105 march: bernoulli2
+2024-05-06 16:28:42,890 file: hb_mapper_checker.py func: hb_mapper_checker line No: 110 input names []
+2024-05-06 16:28:42,890 file: hb_mapper_checker.py func: hb_mapper_checker line No: 111 input shapes {}
+2024-05-06 16:28:42,890 file: hb_mapper_checker.py func: hb_mapper_checker line No: 117 Begin model checking....
+2024-05-06 16:28:42,891 file: build.py func: build line No: 36 [Mon May  6 16:28:42 2024] Start to Horizon NN Model Convert.
+2024-05-06 16:28:42,891 file: dict_parser.py func: dict_parser line No: 28 The input parameter is not specified, convert with default parameters.
+2024-05-06 16:28:42,891 file: dict_parser.py func: dict_parser line No: 513 The hbdk parameter is not specified, and the submodel will be compiled with the default parameter.
+2024-05-06 16:28:42,891 file: build.py func: build line No: 143 HorizonNN version: 0.13.3
+2024-05-06 16:28:42,892 file: build.py func: build line No: 147 HBDK version: 3.27.4
+2024-05-06 16:28:42,892 file: build.py func: build line No: 36 [Mon May  6 16:28:42 2024] Start to parse the onnx model.
+2024-05-06 16:28:43,048 file: onnx_parser.py func: onnx_parser line No: 146 ONNX model info:
+ONNX IR version:  6
+Opset version:    11
+Input name:       images, [1, 3, 640, 640]
+2024-05-06 16:28:43,264 file: build.py func: build line No: 39 [Mon May  6 16:28:43 2024] End to parse the onnx model.
+2024-05-06 16:28:43,265 file: build.py func: build line No: 266 Model input names: ['images']
+2024-05-06 16:28:43,323 file: build.py func: build line No: 537 Saving the original float model: ./.hb_check/original_float_model.onnx.
+2024-05-06 16:28:43,324 file: build.py func: build line No: 36 [Mon May  6 16:28:43 2024] Start to optimize the model.
+2024-05-06 16:28:43,635 file: build.py func: build line No: 39 [Mon May  6 16:28:43 2024] End to optimize the model.
+2024-05-06 16:28:43,702 file: build.py func: build line No: 548 Saving the optimized model: ./.hb_check/optimized_float_model.onnx.
+2024-05-06 16:28:43,702 file: build.py func: build line No: 36 [Mon May  6 16:28:43 2024] Start to calibrate the model.
+2024-05-06 16:28:43,979 file: calibration_data_set.py func: calibration_data_set line No: 67 There are 1 samples in the calibration data set.
+2024-05-06 16:28:43,982 file: max_calibrater.py func: max_calibrater line No: 68 Run calibration model with max method.
+2024-05-06 16:28:44,867 file: build.py func: build line No: 39 [Mon May  6 16:28:44 2024] End to calibrate the model.
+2024-05-06 16:28:44,867 file: build.py func: build line No: 36 [Mon May  6 16:28:44 2024] Start to quantize the model.
+2024-05-06 16:28:47,118 file: build.py func: build line No: 39 [Mon May  6 16:28:47 2024] End to quantize the model.
+2024-05-06 16:28:47,508 file: build.py func: build line No: 562 Saving the quantized model: ./.hb_check/quantized_model.onnx.
+2024-05-06 16:28:47,508 file: build.py func: build line No: 36 [Mon May  6 16:28:47 2024] Start to compile the model with march bernoulli2.
+2024-05-06 16:28:47,508 file: dict_parser.py func: dict_parser line No: 518 Parsing the hbdk parameter:{'hbdk_pass_through_params': '--O0'}
+2024-05-06 16:28:48,020 file: hybrid_build.py func: hybrid_build line No: 123 Compile submodel: torch-jit-export_subgraph_0
+2024-05-06 16:28:48,412 file: hbdk_cc.py func: hbdk_cc line No: 119 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NHWC']
+2024-05-06 16:28:48,914 file: hybrid_build.py func: hybrid_build line No: 123 Compile submodel: torch-jit-export_subgraph_1
+2024-05-06 16:28:48,963 file: hbdk_cc.py func: hbdk_cc line No: 119 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NCHW']
+2024-05-06 16:28:49,005 file: hybrid_build.py func: hybrid_build line No: 123 Compile submodel: torch-jit-export_subgraph_2
+2024-05-06 16:28:49,070 file: hbdk_cc.py func: hbdk_cc line No: 119 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NHWC']
+2024-05-06 16:28:49,174 file: hybrid_build.py func: hybrid_build line No: 123 Compile submodel: torch-jit-export_subgraph_3
+2024-05-06 16:28:49,222 file: hbdk_cc.py func: hbdk_cc line No: 119 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NCHW']
+2024-05-06 16:28:49,263 file: hybrid_build.py func: hybrid_build line No: 123 Compile submodel: torch-jit-export_subgraph_4
+2024-05-06 16:28:49,375 file: hbdk_cc.py func: hbdk_cc line No: 119 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NCHW']
+2024-05-06 16:28:51,166 file: hybrid_build.py func: hybrid_build line No: 123 Compile submodel: torch-jit-export_subgraph_5
+2024-05-06 16:28:51,223 file: hbdk_cc.py func: hbdk_cc line No: 119 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NCHW']
+2024-05-06 16:28:51,276 file: hybrid_build.py func: hybrid_build line No: 123 Compile submodel: torch-jit-export_subgraph_6
+2024-05-06 16:28:51,334 file: hbdk_cc.py func: hbdk_cc line No: 119 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NCHW']
+2024-05-06 16:28:51,378 file: hybrid_build.py func: hybrid_build line No: 123 Compile submodel: torch-jit-export_subgraph_7
+2024-05-06 16:28:51,617 file: hbdk_cc.py func: hbdk_cc line No: 119 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NCHW']
+2024-05-06 16:28:51,863 file: hybrid_build.py func: hybrid_build line No: 123 Compile submodel: torch-jit-export_subgraph_8
+2024-05-06 16:28:51,910 file: hbdk_cc.py func: hbdk_cc line No: 119 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NCHW']
+2024-05-06 16:28:51,948 file: hybrid_build.py func: hybrid_build line No: 123 Compile submodel: torch-jit-export_subgraph_9
+2024-05-06 16:28:51,994 file: hbdk_cc.py func: hbdk_cc line No: 119 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NCHW']
+2024-05-06 16:28:52,034 file: hybrid_build.py func: hybrid_build line No: 123 Compile submodel: torch-jit-export_subgraph_10
+2024-05-06 16:28:52,166 file: hbdk_cc.py func: hbdk_cc line No: 119 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NHWC']
+2024-05-06 16:28:52,299 file: hybrid_build.py func: hybrid_build line No: 123 Compile submodel: torch-jit-export_subgraph_11
+2024-05-06 16:28:52,347 file: hbdk_cc.py func: hbdk_cc line No: 119 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NCHW']
+2024-05-06 16:28:53,158 file: build.py func: build line No: 39 [Mon May  6 16:28:53 2024] End to compile the model with march bernoulli2.
+2024-05-06 16:28:53,161 file: node_info.py func: node_info line No: 54 The converted model node information:
+==============================================================================================
+Node                                                ON   Subgraph  Type                       
+----------------------------------------------------------------------------------------------
+Conv_0                                              BPU  id(0)     HzSQuantizedConv           
+Mul_2                                               BPU  id(0)     HzLut                      
+Conv_3                                              BPU  id(0)     HzSQuantizedConv           
+Mul_5                                               BPU  id(0)     HzLut                      
+Conv_6                                              BPU  id(0)     HzSQuantizedConv           
+Mul_8                                               BPU  id(0)     HzLut                      
+Split_9                                             BPU  id(0)     Split                      
+Conv_10                                             BPU  id(0)     HzSQuantizedConv           
+Mul_12                                              BPU  id(0)     HzLut                      
+Conv_13                                             BPU  id(0)     HzSQuantizedConv           
+Mul_15                                              BPU  id(0)     HzLut                      
+UNIT_CONV_FOR_Add_16                                BPU  id(0)     HzSQuantizedConv           
+...nnx::Concat_621_0.194907024502754_TO_FUSE_SCALE  BPU  id(0)     HzSQuantizedConv           
+...NV_FOR_input.24_0.194907024502754_TO_FUSE_SCALE  BPU  id(0)     HzSQuantizedConv           
+Concat_17                                           BPU  id(0)     Concat                     
+Conv_18                                             BPU  id(0)     HzSQuantizedConv           
+Mul_20                                              BPU  id(0)     HzLut                      
+Conv_21                                             BPU  id(0)     HzSQuantizedConv           
+Mul_23                                              BPU  id(0)     HzLut                      
+Conv_24                                             BPU  id(0)     HzSQuantizedConv           
+Mul_26                                              BPU  id(0)     HzLut                      
+Split_27                                            BPU  id(0)     Split                      
+Conv_28                                             BPU  id(0)     HzSQuantizedConv           
+Mul_30                                              BPU  id(0)     HzLut                      
+Conv_31                                             BPU  id(0)     HzSQuantizedConv           
+Mul_33                                              BPU  id(0)     HzLut                      
+UNIT_CONV_FOR_Add_34                                BPU  id(0)     HzSQuantizedConv           
+Conv_35                                             BPU  id(0)     HzSQuantizedConv           
+Mul_37                                              BPU  id(0)     HzLut                      
+Conv_38                                             BPU  id(0)     HzSQuantizedConv           
+Mul_40                                              BPU  id(0)     HzLut                      
+UNIT_CONV_FOR_Add_41                                BPU  id(0)     HzSQuantizedConv           
+...nnx::Concat_645_0.044478543102741_TO_FUSE_SCALE  BPU  id(0)     HzSQuantizedConv           
+...NV_FOR_input.72_0.044478543102741_TO_FUSE_SCALE  BPU  id(0)     HzSQuantizedConv           
+...NV_FOR_input.92_0.044478543102741_TO_FUSE_SCALE  BPU  id(0)     HzSQuantizedConv           
+Concat_42                                           BPU  id(0)     Concat                     
+Conv_43                                             BPU  id(0)     HzSQuantizedConv           
+Mul_45                                              BPU  id(0)     HzLut                      
+Conv_46                                             BPU  id(0)     HzSQuantizedConv           
+Mul_48                                              BPU  id(0)     HzLut                      
+Conv_49                                             BPU  id(0)     HzSQuantizedConv           
+Mul_51                                              BPU  id(0)     HzLut                      
+Split_52                                            BPU  id(0)     Split                      
+Conv_53                                             BPU  id(0)     HzSQuantizedConv           
+Mul_55                                              BPU  id(0)     HzLut                      
+Conv_56                                             BPU  id(0)     HzSQuantizedConv           
+Mul_58                                              BPU  id(0)     HzLut                      
+UNIT_CONV_FOR_Add_59                                BPU  id(0)     HzSQuantizedConv           
+Conv_60                                             BPU  id(0)     HzSQuantizedConv           
+Mul_62                                              BPU  id(0)     HzLut                      
+Conv_63                                             BPU  id(0)     HzSQuantizedConv           
+Mul_65                                              BPU  id(0)     HzLut                      
+UNIT_CONV_FOR_Add_66                                BPU  id(0)     HzSQuantizedConv           
+...nnx::Concat_678_0.049025669693947_TO_FUSE_SCALE  BPU  id(0)     HzSQuantizedConv           
+...V_FOR_input.140_0.049025669693947_TO_FUSE_SCALE  BPU  id(0)     HzSQuantizedConv           
+...V_FOR_input.160_0.049025669693947_TO_FUSE_SCALE  BPU  id(0)     HzSQuantizedConv           
+Concat_67                                           BPU  id(0)     Concat                     
+Conv_68                                             BPU  id(0)     HzSQuantizedConv           
+Mul_70                                              BPU  id(0)     HzLut                      
+Conv_71                                             BPU  id(0)     HzSQuantizedConv           
+Mul_73                                              BPU  id(0)     HzLut                      
+Conv_74                                             BPU  id(0)     HzSQuantizedConv           
+Mul_76                                              BPU  id(0)     HzLut                      
+Split_77                                            BPU  id(0)     Split                      
+Conv_78                                             BPU  id(0)     HzSQuantizedConv           
+Mul_80                                              BPU  id(0)     HzLut                      
+Conv_81                                             BPU  id(0)     HzSQuantizedConv           
+Mul_83                                              BPU  id(0)     HzLut                      
+UNIT_CONV_FOR_Add_84                                BPU  id(0)     HzSQuantizedConv           
+...nnx::Concat_711_0.083842292428017_TO_FUSE_SCALE  BPU  id(0)     HzSQuantizedConv           
+...V_FOR_input.208_0.083842292428017_TO_FUSE_SCALE  BPU  id(0)     HzSQuantizedConv           
+Concat_85                                           BPU  id(0)     Concat                     
+Conv_86                                             BPU  id(0)     HzSQuantizedConv           
+Mul_88                                              BPU  id(0)     HzLut                      
+Conv_89                                             BPU  id(0)     HzSQuantizedConv           
+Mul_91                                              BPU  id(0)     HzLut                      
+MaxPool_92                                          BPU  id(0)     HzQuantizedMaxPool         
+MaxPool_93                                          BPU  id(0)     HzQuantizedMaxPool         
+MaxPool_94                                          BPU  id(0)     HzQuantizedMaxPool         
+Concat_95                                           BPU  id(0)     Concat                     
+Conv_96                                             BPU  id(0)     HzSQuantizedConv           
+Mul_98                                              BPU  id(0)     HzLut                      
+Resize_100                                          BPU  id(0)     HzQuantizedResizeUpsample  
+...nnx::Concat_743_0.030782546848059_TO_FUSE_SCALE  BPU  id(0)     HzSQuantizedConv           
+..._onnx::Conv_702_0.030782546848059_TO_FUSE_SCALE  BPU  id(0)     HzSQuantizedConv           
+Concat_101                                          BPU  id(0)     Concat                     
+Conv_102                                            BPU  id(0)     HzSQuantizedConv           
+Mul_104                                             BPU  id(0)     HzLut                      
+Split_105                                           BPU  id(0)     Split                      
+Conv_106                                            BPU  id(0)     HzSQuantizedConv           
+Mul_108                                             BPU  id(0)     HzLut                      
+Conv_109                                            BPU  id(0)     HzSQuantizedConv           
+Mul_111                                             BPU  id(0)     HzLut                      
+Reshape_116                                         CPU  --        Reshape                    
+Conv_129                                            BPU  id(0)     HzSQuantizedConv           
+Transpose_117                                       CPU  --        Transpose                  
+Reshape_130                                         CPU  --        Reshape                    
+Reshape_118                                         CPU  --        Reshape                    
+MatMul_120                                          CPU  --        MatMul                     
+Reshape_121                                         CPU  --        Reshape                    
+ReduceMax_122                                       CPU  --        ReduceMax                  
+Div_124                                             CPU  --        Div                        
+Add_125                                             BPU  id(1)     HzSElementWiseAdd          
+Sigmoid_126                                         BPU  id(1)     HzLut                      
+Unsqueeze_131                                       CPU  --        Reshape                    
+Mul_132                                             CPU  --        Mul                        
+Reshape_133                                         CPU  --        Reshape                    
+Concat_134                                          CPU  --        Concat                     
+Conv_135                                            BPU  id(2)     HzSQuantizedConv           
+Mul_137                                             BPU  id(2)     HzLut                      
+Resize_139                                          BPU  id(2)     HzQuantizedResizeUpsample  
+...nnx::Concat_846_0.031978826969862_TO_FUSE_SCALE  BPU  id(2)     HzSQuantizedConv           
+..._onnx::Conv_669_0.031978826969862_TO_FUSE_SCALE  BPU  id(0)     HzSQuantizedConv           
+Concat_140                                          BPU  id(2)     Concat                     
+Conv_141                                            BPU  id(2)     HzSQuantizedConv           
+Mul_143                                             BPU  id(2)     HzLut                      
+Split_144                                           BPU  id(2)     Split                      
+Conv_145                                            BPU  id(2)     HzSQuantizedConv           
+Mul_147                                             BPU  id(2)     HzLut                      
+Conv_148                                            BPU  id(2)     HzSQuantizedConv           
+Mul_150                                             BPU  id(2)     HzLut                      
+Reshape_154                                         CPU  --        Reshape                    
+Conv_167                                            BPU  id(2)     HzSQuantizedConv           
+Transpose_155                                       CPU  --        Transpose                  
+Reshape_168                                         CPU  --        Reshape                    
+Reshape_156                                         CPU  --        Reshape                    
+MatMul_158                                          CPU  --        MatMul                     
+Reshape_159                                         CPU  --        Reshape                    
+ReduceMax_160                                       CPU  --        ReduceMax                  
+Div_162                                             CPU  --        Div                        
+Add_163                                             BPU  id(3)     HzSElementWiseAdd          
+Sigmoid_164                                         BPU  id(3)     HzLut                      
+Unsqueeze_169                                       CPU  --        Reshape                    
+Mul_170                                             CPU  --        Mul                        
+Reshape_171                                         CPU  --        Reshape                    
+Concat_172                                          CPU  --        Concat                     
+Conv_173                                            BPU  id(4)     HzSQuantizedConv           
+Mul_175                                             BPU  id(4)     HzLut                      
+Conv_176                                            BPU  id(4)     HzSQuantizedConv           
+Conv_254                                            BPU  id(4)     HzSQuantizedConv           
+Conv_270                                            BPU  id(4)     HzSQuantizedConv           
+Mul_178                                             BPU  id(4)     HzLut                      
+Mul_256                                             BPU  id(4)     HzLut                      
+Mul_272                                             BPU  id(4)     HzLut                      
+...nnx::Concat_947_0.031978826969862_TO_FUSE_SCALE  BPU  id(4)     HzSQuantizedConv           
+...nnx::Resize_841_0.031978826969862_TO_FUSE_SCALE  BPU  id(2)     HzSQuantizedConv           
+Concat_179                                          BPU  id(4)     Concat                     
+Conv_257                                            BPU  id(4)     HzSQuantizedConv           
+Conv_273                                            BPU  id(4)     HzSQuantizedConv           
+Conv_180                                            BPU  id(4)     HzSQuantizedConv           
+Mul_259                                             BPU  id(4)     HzLut                      
+Mul_275                                             BPU  id(4)     HzLut                      
+Mul_182                                             BPU  id(4)     HzLut                      
+Conv_260                                            BPU  id(4)     HzSQuantizedConv           
+Conv_276                                            BPU  id(4)     HzSQuantizedConv           
+Split_183                                           BPU  id(4)     Split                      
+Conv_184                                            BPU  id(4)     HzSQuantizedConv           
+Reshape_262                                         CPU  --        Reshape                    
+MatMul_264                                          CPU  --        MatMul                     
+Mul_186                                             BPU  id(4)     HzLut                      
+Reshape_265                                         CPU  --        Reshape                    
+Conv_187                                            BPU  id(4)     HzSQuantizedConv           
+Mul_268                                             BPU  id(5)     HzSQuantizedConv           
+Mul_189                                             BPU  id(4)     HzLut                      
+Add_269                                             CPU  --        Add                        
+Reshape_193                                         CPU  --        Reshape                    
+Conv_206                                            BPU  id(4)     HzSQuantizedConv           
+Transpose_194                                       CPU  --        Transpose                  
+Reshape_207                                         CPU  --        Reshape                    
+Reshape_195                                         CPU  --        Reshape                    
+MatMul_197                                          CPU  --        MatMul                     
+Reshape_198                                         CPU  --        Reshape                    
+ReduceMax_199                                       CPU  --        ReduceMax                  
+Div_201                                             CPU  --        Div                        
+Add_202                                             BPU  id(6)     HzSElementWiseAdd          
+Sigmoid_203                                         BPU  id(6)     HzLut                      
+Unsqueeze_208                                       CPU  --        Reshape                    
+Mul_209                                             CPU  --        Mul                        
+Reshape_210                                         CPU  --        Reshape                    
+Concat_211                                          CPU  --        Concat                     
+Conv_212                                            BPU  id(7)     HzSQuantizedConv           
+Mul_214                                             BPU  id(7)     HzLut                      
+Conv_215                                            BPU  id(7)     HzSQuantizedConv           
+Conv_285                                            BPU  id(7)     HzSQuantizedConv           
+Conv_301                                            BPU  id(7)     HzSQuantizedConv           
+Mul_217                                             BPU  id(7)     HzLut                      
+Mul_287                                             BPU  id(7)     HzLut                      
+Mul_303                                             BPU  id(7)     HzLut                      
+...nx::Concat_1048_0.030782546848059_TO_FUSE_SCALE  BPU  id(7)     HzSQuantizedConv           
+...nnx::Resize_738_0.030782546848059_TO_FUSE_SCALE  BPU  id(0)     HzSQuantizedConv           
+Concat_218                                          BPU  id(7)     Concat                     
+Conv_288                                            BPU  id(7)     HzSQuantizedConv           
+Conv_304                                            BPU  id(7)     HzSQuantizedConv           
+Conv_219                                            BPU  id(7)     HzSQuantizedConv           
+Mul_290                                             BPU  id(7)     HzLut                      
+Mul_306                                             BPU  id(7)     HzLut                      
+Mul_221                                             BPU  id(7)     HzLut                      
+Conv_291                                            BPU  id(7)     HzSQuantizedConv           
+Conv_307                                            BPU  id(7)     HzSQuantizedConv           
+Split_222                                           BPU  id(7)     Split                      
+Conv_223                                            BPU  id(7)     HzSQuantizedConv           
+Reshape_293                                         CPU  --        Reshape                    
+MatMul_295                                          CPU  --        MatMul                     
+Mul_225                                             BPU  id(7)     HzLut                      
+Reshape_296                                         CPU  --        Reshape                    
+Conv_226                                            BPU  id(7)     HzSQuantizedConv           
+Mul_299                                             BPU  id(8)     HzSQuantizedConv           
+Mul_228                                             BPU  id(7)     HzLut                      
+Add_300                                             CPU  --        Add                        
+Reshape_232                                         CPU  --        Reshape                    
+Conv_245                                            BPU  id(7)     HzSQuantizedConv           
+Transpose_233                                       CPU  --        Transpose                  
+Reshape_246                                         CPU  --        Reshape                    
+Reshape_234                                         CPU  --        Reshape                    
+MatMul_236                                          CPU  --        MatMul                     
+Reshape_237                                         CPU  --        Reshape                    
+ReduceMax_238                                       CPU  --        ReduceMax                  
+Div_240                                             CPU  --        Div                        
+Add_241                                             BPU  id(9)     HzSElementWiseAdd          
+Sigmoid_242                                         BPU  id(9)     HzLut                      
+Unsqueeze_247                                       CPU  --        Reshape                    
+Mul_248                                             CPU  --        Mul                        
+Reshape_249                                         CPU  --        Reshape                    
+Concat_250                                          CPU  --        Concat                     
+Conv_251                                            BPU  id(10)    HzSQuantizedConv           
+Mul_253                                             BPU  id(10)    HzLut                      
+Conv_316                                            BPU  id(10)    HzSQuantizedConv           
+Conv_332                                            BPU  id(10)    HzSQuantizedConv           
+Mul_318                                             BPU  id(10)    HzLut                      
+Mul_334                                             BPU  id(10)    HzLut                      
+Conv_319                                            BPU  id(10)    HzSQuantizedConv           
+Conv_335                                            BPU  id(10)    HzSQuantizedConv           
+Mul_321                                             BPU  id(10)    HzLut                      
+Mul_337                                             BPU  id(10)    HzLut                      
+Conv_322                                            BPU  id(10)    HzSQuantizedConv           
+Conv_338                                            BPU  id(10)    HzSQuantizedConv           
+Reshape_324                                         CPU  --        Reshape                    
+MatMul_326                                          CPU  --        MatMul                     
+Reshape_327                                         CPU  --        Reshape                    
+Mul_330                                             BPU  id(11)    HzSQuantizedConv           
+Add_331                                             CPU  --        Add
+2024-05-06 16:28:53,162 file: build.py func: build line No: 39 [Mon May  6 16:28:53 2024] End to Horizon NN Model Convert.
+2024-05-06 16:28:53,170 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2841 ONNX model output num : 6
+2024-05-06 16:28:53,223 file: hb_mapper_checker.py func: hb_mapper_checker line No: 141 End model checking....
