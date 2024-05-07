@@ -20,6 +20,15 @@ yoloworld_horizon：地平线模型、测试（量化）图像、测试结果、
 
 # 在 rk3588板子上时耗
 
+rknn 板端参考![【yolo world 目标检测 rknn 的C++部署】](https://blog.csdn.net/zhangqian_1/article/details/138530486)
+
 ![rk3588时耗](https://github.com/cqu20160901/yoloworld-onnx-tensorRT-rknn-horizon/assets/22290931/3c5f08a7-a395-4bca-81a6-42070f0bf942)
+
+# TensorRT C++ 时耗参考
+
+TensorRT部署参考![【yolo world tensorRT 的 C++ 部署】](https://blog.csdn.net/zhangqian_1/article/details/138532260)
+
+![image](https://github.com/cqu20160901/yoloworld-onnx-tensorRT-rknn-horizon/assets/22290931/1e55e485-1ad4-4fb4-84e8-021ee0465da3)
+
 
 
