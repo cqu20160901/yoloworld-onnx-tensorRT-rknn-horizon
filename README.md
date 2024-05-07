@@ -2,7 +2,7 @@
 
 yolovworld 目标检测部署版本，便于移植不同平台（onnx、tensorRT、rknn、Horizon），全网部署最简单、速度最快的部署方式，后处理为C++部署而写，python 测试后处理意义不大。
 
-导出onnx参考[yolov8n 瑞芯微RKNN和地平线Horizon芯片仿真测试部署，部署工程难度小、模型推理速度快](https://blog.csdn.net/zhangqian_1/article/details/135523096)。
+导出onnx参考[【yolo_world 瑞芯微芯片rknn部署、地平线芯片Horizon部署、TensorRT部署】](https://blog.csdn.net/zhangqian_1/article/details/138530486)。
 
 # 文件夹结构说明
 
